@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فضيلة الشيخ الروحاني أبو العلا - لجلب الحبيب وفك السحر</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0b0d17; margin: 0; padding: 0; text-align: center; color: #e0e0e0; }
+        .container { max-width: 800px; margin: 40px auto; background: #161b29; padding: 40px; border-radius: 25px; border: 1px solid #c9a227; box-shadow: 0 0 30px rgba(201, 162, 39, 0.15); }
+        
+        .page { display: none; } 
+        .active { display: block; animation: fadeIn 0.5s; } 
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        h1 { color: #c9a227; font-size: 32px; margin-bottom: 15px; }
+        h2 { color: #c9a227; font-size: 26px; margin-top: 40px; border-bottom: 1px dashed #333; padding-bottom: 10px; }
+        
+        /* قائمة الخدمات */
+        .services { padding: 0; }
+        .services li { margin-bottom: 15px; list-style: none; position: relative; padding-right: 35px; font-size: 18px; text-align: right; border-bottom: 1px solid #1f2638; padding-bottom: 10px; cursor: pointer; transition: 0.3s; }
+        .services li:hover { color: #c9a227; padding-right: 45px; background: rgba(201, 162, 39, 0.05); }
+        .services li::before { content: '✦'; position: absolute; right: 0; color: #c9a227; font-size: 20px; }
+        
+        /* السلايدر */
+        .slider-container { background: rgba(28, 34, 53, 0.9); border-radius: 15px; padding: 30px; border: 1px solid #333; margin-top: 20px; text-align: right; }
+        .testimonial-slide { display: none; }
+        .testimonial-slide.active-slide { display: block; animation: slideIn 0.5s; }
+        @keyframes slideIn { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
+
+        /* نموذج التعليقات */
+        .comment-section { margin-top: 50px; background: #0e121d; padding: 25px; border-radius: 20px; text-align: right; }
+        .comment-form input, .comment-form textarea { width: 100%; padding: 12px; margin-bottom: 10px; background: #161b29; border: 1px solid #333; color: white; border-radius: 8px; }
+        .comment-form button { background: #c9a227; border: none; padding: 10px 25px; border-radius: 8px; font-weight: bold; cursor: pointer; }
+
+        .article-box { text-align: right; background: #1c2235; padding: 25px; border-radius: 15px; border-right: 5px solid #c9a227; margin: 30px 0; font-size: 19px; line-height: 1.8; }
+        .btn-whatsapp { display: inline-block; background: linear-gradient(45deg, #25d366, #128c7e); color: white; padding: 18px 50px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 22px; margin-top: 20px; }
+        .back-btn { display: block; margin-top: 30px; color: #c9a227; cursor: pointer; text-decoration: underline; }
+
+        /* تذييل الصفحة */
+        .footer { margin-top: 50px; font-size: 13px; color: #666; }
+        .footer a { color: #c9a227; text-decoration: none; margin: 0 10px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <div id="home" class="page active">
+        <h1>فضيلة الشيخ الروحاني أبو العلا</h1>
+        <p>علاجات روحانية ورقيه شرعية مبنية على الكتاب والسنة.</p>
+
+        <ul class="services">
+            <li onclick="showPage('service1')">جلب الحبيب ورد المطلقة وكسر النفور الزوجي.</li>
+            <li onclick="showPage('service2')">علاج وفك كافة أنواع السحر والتحصين الشامل.</li>
+            <li onclick="showPage('service3')">تيسير أمور الزواج المتعطلة وفتح النصيب.</li>
+            <li onclick="showPage('service4')">خواتم روحانية مخدومة للرزق والقبول والهيبة.</li>
+            <li onclick="showPage('service5')">رد الغائب وحل الخلافات الأسرية والاجتماعية.</li>
+        </ul>
+        
+        <h2>قالوا عن فضيلة الشيخ</h2>
+        <div class="slider-container">
+            <div class="testimonial-slide active-slide">
+                <strong>أبو فهد (الرياض) ⭐⭐⭐⭐⭐</strong>
+                <p>"بارك الله فيك يا شيخ، عاد الهدوء لبيتي بفضل الله."</p>
+            </div>
+            <div class="testimonial-slide">
+                <strong>أم ناصر (الكويت) ⭐⭐⭐⭐⭐</strong>
+                <p>"الحمد لله تم جلب ابني الغائب بعد انقطاع طويل."</p>
+            </div>
+        </div>
+
+        <div class="comment-section">
+            <h3>أضف تجربتك</h3>
+            <div class="comment-form">
+                <input type="text" placeholder="الاسم" id="nameInp">
+                <textarea placeholder="اكتب تعليقك..." id="commInp"></textarea>
+                <button onclick="alert('شكراً لك! سيظهر تعليقك بعد المراجعة.')">إرسال</button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <a onclick="showPage('privacy')">سياسة الخصوصية</a> | 
+            <a onclick="showPage('privacy')">إخلاء المسؤولية</a>
+            <p>© 2026 مركز الشيخ أبو العلا - جميع الحقوق محفوظة</p>
+        </div>
+    </div>
+
+    <div id="privacy" class="page">
+        <h1>السياسات والخصوصية</h1>
+        <div class="article-box">
+            <strong>أولاً: سياسة الخصوصية</strong><br>
+            نحن نلتزم بأقصى درجات السرية التامة لجميع الحالات التي تتعامل معنا. لا يتم مشاركة أي معلومات شخصية أو تفاصيل العلاج مع أي طرف ثالث تحت أي ظرف من الظروف.<br><br>
+            <strong>ثانياً: إخلاء المسؤولية</strong><br>
+            كافة الأعمال الروحانية والرقية الشرعية هي أسباب شرعية، والنتائج دائماً هي بمشيئة الله عز وجل وتوفيقه. نحن لا ندعي الغيب ولا نقوم بأي عمل يخالف الشريعة الإسلامية. النتائج قد تختلف من حالة إلى أخرى بناءً على طبيعة المشكلة ومدى الاستجابة للعلاج.
+        </div>
+        <span class="back-btn" onclick="showPage('home')">← العودة للرئيسية</span>
+    </div>
+
+    <div id="service1" class="page">
+        <h1>جلب الحبيب ورد المطلقة</h1>
+        <div class="article-box">نعمل من خلال الرقية والحلول الروحانية الصادقة على تأليف القلوب وإعادة المودة بين الأزواج وإزالة أسباب النفور والجفاء بإذن الله تعالى.</div>
+        <a href="https://wa.me/9647871158520" class="btn-whatsapp">تواصل عبر واتساب</a>
+        <span class="back-btn" onclick="showPage('home')">← العودة للرئيسية</span>
+    </div>
+
+    <div id="service2" class="page">
+        <h1>فك السحر والتحصين</h1>
+        <div class="article-box">علاج شامل للسحر بجميع أنواعه مع جلسات تحصين قوية تحمي الشخص والبيت من العوارض والحسد، مع الالتزام بالسرية والمنهج الشرعي.</div>
+        <a href="https://wa.me/9647871158520" class="btn-whatsapp">تواصل عبر واتساب</a>
+        <span class="back-btn" onclick="showPage('home')">← العودة للرئيسية</span>
+    </div>
+
+    <div id="service3" class="page">
+        <h1>تيسير الزواج</h1>
+        <div class="article-box">جلسات لفتح النصيب وإزالة التعطيل الذي يواجه الشباب والفتيات في أمور الخطبة والزواج، لتيسير الأمور وفتح أبواب القبول.</div>
+        <a href="https://wa.me/9647871158520" class="btn-whatsapp">تواصل عبر واتساب</a>
+        <span class="back-btn" onclick="showPage('home')">← العودة للرئيسية</span>
+    </div>
+
+    <div id="service4" class="page">
+        <h1>خواتم روحانية مخدومة</h1>
+        <div class="article-box">خواتم مجهزة ومخدومة لأغراض الهيبة، القبول، وتيسير الرزق، مصاغة بعناية وموجهة لتكون سبباً في التوفيق والقبول الاجتماعي.</div>
+        <a href="https://wa.me/9647871158520" class="btn-whatsapp">تواصل عبر واتساب</a>
+        <span class="back-btn" onclick="showPage('home')">← العودة للرئيسية</span>
+    </div>
+
+    <div id="service5" class="page">
+        <h1>رد الغائب وحل الخلافات</h1>
+        <div class="article-box">العمل على تقريب وجهات النظر وحل النزاعات الأسرية المستعصية ورد الغائبين لبيوتهم، ليعم السلام والاستقرار العائلي مجدداً.</div>
+        <a href="https://wa.me/9647871158520" class="btn-whatsapp">تواصل عبر واتساب</a>
+        <span class="back-btn" onclick="showPage('home')">← العودة للرئيسية</span>
+    </div>
+
+</div>
+
+<script>
+    function showPage(pageId) {
+        var pages = document.getElementsByClassName('page');
+        for (var i = 0; i < pages.length; i++) { pages[i].classList.remove('active'); }
+        document.getElementById(pageId).classList.add('active');
+        window.scrollTo(0, 0);
+    }
+
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.testimonial-slide');
+    setInterval(() => {
+        slides[currentSlide].classList.remove('active-slide');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active-slide');
+    }, 4000);
+</script>
+
+</body>
+</html>
